@@ -1,0 +1,99 @@
+.sunnygdpr-banner-wrapper {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+    background: #1e1e1e;
+    color: #ffffff;
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    z-index: 999999;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.sunnygdpr-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.sunnygdpr-banner-text {
+    margin: 0;
+    color: #cccccc;
+}
+
+.sunnygdpr-banner-text a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.sunnygdpr-banner-text a:hover {
+    color: #38b6ff;
+}
+
+.sunnygdpr-banner-actions {
+    display: flex;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.sunnygdpr-btn {
+    padding: 9px 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.sunnygdpr-btn-accept {
+    background: #0073aa;
+    color: #ffffff;
+}
+
+.sunnygdpr-btn-accept:hover {
+    background: #005177;
+}
+
+.sunnygdpr-btn-decline {
+    background: #333333;
+    color: #aaaaaa;
+}
+
+.sunnygdpr-btn-decline:hover {
+    background: #444444;
+    color: #ffffff;
+}
+
+.sunnygdpr-btn-restore {
+    background: #0073aa;
+    color: #ffffff;
+    padding: 12px 24px;
+    font-size: 15px;
+}
+
+.sunnygdpr-btn-restore:hover {
+    background: #005177;
+}
+
+.sunnygdpr-restore-wrapper {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .sunnygdpr-banner-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sunnygdpr-banner-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}

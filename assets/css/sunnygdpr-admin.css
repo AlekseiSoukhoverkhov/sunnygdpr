@@ -1,0 +1,78 @@
+/**
+ * Admin Styles for SunnyGDPR
+ *
+ * @package SunnyGDPR
+ */
+
+.sunnygdpr-admin-wrap {
+	display: flex;
+	gap: 20px;
+	margin-top: 20px;
+	flex-wrap: wrap;
+}
+
+.sunnygdpr-main-column {
+	flex: 1 1 600px;
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+.sunnygdpr-checkbox-label {
+	display: block;
+	margin-bottom: 8px;
+}
+
+.sunnygdpr-divider {
+	margin: 20px 0;
+	border: 0;
+	border-top: 1px solid #ddd;
+}
+
+.sunnygdpr-sidebar {
+	flex: 0 0 300px;
+	background: #f0f6fc;
+	border: 1px solid #c3d9ef;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+.sunnygdpr-sidebar h3 {
+	margin-top: 0;
+	color: #0a4b78;
+}
+
+.sunnygdpr-sidebar p {
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+.sunnygdpr-sidebar-divider {
+	border: 0;
+	border-top: 1px solid #c3d9ef;
+	margin: 15px 0;
+}
+
+.sunnygdpr-btn-block {
+	width: 100%;
+	text-align: center;
+	box-sizing: border-box;
+}
+
+/* Custom Brand Button for SunnyWebStudio.com */
+.wp-core-ui .sunnygdpr-btn-brand {
+	background-color: #ffcc05;
+	border-color: #e6b800;
+	color: #ffffff;
+	text-shadow: none;
+	box-shadow: none;
+}
+
+.wp-core-ui .sunnygdpr-btn-brand:hover,
+.wp-core-ui .sunnygdpr-btn-brand:focus,
+.wp-core-ui .sunnygdpr-btn-brand:active {
+	background-color: #0B3C5D;
+	border-color: #0B3C5D;
+	color: #ffffff;
+}

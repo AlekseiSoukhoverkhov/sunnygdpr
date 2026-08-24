@@ -1,0 +1,380 @@
+/**
+ * SunnyComments Main Stylesheet
+ * 
+ * @package     SunnyComments
+ * @author      SunnyWebStudio, Aleksei Sukhoverkhov
+ * @link        https://sunnywebstudio.com/
+ * @version     1.0.0
+ * @license     GPL-2.0+
+ */
+
+/* ==========================================================================
+   1. Graphic Verification Badge & Author Highlights
+   ========================================================================== */
+
+/* Author Comment Card Wrapper */
+.comment.sunnycom-author-comment,
+.sunnycom-author-comment {
+    background-color: var(--sunnycom-expert-bg, #fffdf5) !important;
+    border-left: 4px solid var(--sunnycom-expert-border, #1e3a8a) !important;
+    color: var(--sunnycom-expert-text, #1e293b) !important;
+    padding: 14px 18px !important;
+    border-radius: 4px 12px 12px 12px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Round Graphic Verification Badge */
+.sunnycom-verified-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--sunnycom-expert-badge-bg, #f39c12);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    cursor: default;
+}
+
+.sunnycom-verified-badge .sunnycom-check-icon {
+    display: block;
+}
+
+/* 1-Level Threaded Comment Indentation */
+.comments-area .children {
+    list-style: none;
+    padding-left: 20px;
+    margin-left: 10px;
+    border-left: 2px dashed rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================================================
+   Avatar Selector Grid & Layout
+   ========================================================================== */
+
+.sunnycom-avatar-picker-wrapper {
+    margin: 15px 0;
+    clear: both;
+}
+
+.sunnycom-picker-label {
+    display: block !important;
+    margin-bottom: 10px !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    color: #334155 !important;
+}
+
+.sunnycom-avatar-picker-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important; /* 4 columns on desktop */
+    gap: 12px !important;
+    max-width: 280px !important; /* Compact container width */
+    padding: 12px !important;
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    box-sizing: border-box !important;
+}
+
+.sunnycom-picker-item {
+    width: 100px !important;
+    height: 100px !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    border: 2px solid transparent !important;
+    transition: all 0.2s ease-in-out !important;
+    opacity: 0.65 !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    display: block !important;
+}
+
+.sunnycom-picker-item:hover {
+    opacity: 1 !important;
+    transform: scale(1.1) !important;
+}
+
+.sunnycom-picker-item.active {
+    opacity: 1 !important;
+    border-color: #f39c12 !important;
+    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.35) !important;
+    transform: scale(1.05) !important;
+}
+
+.sunnycom-picker-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    border-radius: 50% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+/* Mobile Responsive Layout */
+@media (max-width: 480px) {
+    .sunnycom-avatar-picker-grid {
+        grid-template-columns: repeat(4, 1fr) !important; /* 2 columns on mobile */
+        max-width: 160px !important;
+    }
+}
+
+.sunnycom-register-optin {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sunnycom-register-optin label {
+    font-size: 13px !important;
+    color: #475569 !important;
+    cursor: pointer;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+    font-weight: normal !important;
+}
+
+.sunnycom-register-optin input[type="checkbox"] {
+    margin: 0 !important;
+    cursor: pointer;
+}
+
+/* Avatar Picker Lock & Preview Rules */
+.sunnycom-hidden {
+    display: none !important;
+}
+
+.sunnycom-selected-preview {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+    width: fit-content;
+}
+
+.sunnycom-preview-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.sunnycom-preview-avatar-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+}
+
+.sunnycom-preview-avatar-wrapper img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 2px solid #f39c12 !important;
+    box-sizing: border-box !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sunnycom-preview-avatar-wrapper:hover img {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.35);
+}
+
+/* Pencil icon hover effect */
+.sunnycom-edit-icon {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Avatar Picker Hide Utility */
+.sunnycom-hidden {
+    display: none !important;
+}
+
+.sunnycom-selected-preview {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+    width: fit-content;
+}
+
+.sunnycom-preview-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.sunnycom-preview-avatar-wrapper {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+}
+
+.sunnycom-preview-avatar-wrapper img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 2px solid #f39c12 !important;
+    box-sizing: border-box !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Clear visual hint on hover: mild scale + glow */
+.sunnycom-selected-preview:hover .sunnycom-preview-avatar-wrapper img {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.35);
+}
+
+/* ==========================================================================
+   Super Commenter Control Bar & Administrative UI
+   ========================================================================== */
+
+.sunnycom-super-bar {
+    background: #f8f9fa;
+    border: 2px solid #1b354e;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 25px;
+    font-family: inherit;
+}
+
+.sunnycom-super-bar-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.sunnycom-super-bar-title {
+    font-weight: 700;
+    color: #1b354e;
+    font-size: 16px;
+}
+
+.sunnycom-super-field {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sunnycom-super-field label {
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0;
+    color: #333;
+}
+
+.sunnycom-super-field input[type="datetime-local"],
+.sunnycom-super-field input[type="text"] {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.sunnycom-super-toggle-label {
+    font-weight: 700;
+    color: #28608f;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    user-select: none;
+}
+
+/* Virtual user control block: hidden by default for native administrator mode */
+.sunnycom-super-controls {
+    display: none;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #ccc;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Display control block when virtual user mode toggle is enabled */
+.sunnycom-super-bar.virtual-active .sunnycom-super-controls {
+    display: flex;
+}
+
+.sunnycom-avatar-preview-box {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sunnycom-avatar-preview-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sunnycom-btn-select {
+    background: #ffb400 !important;
+    color: #fff !important;
+    border: none !important;
+    font-weight: 600 !important;
+}
+
+.sunnycom-btn-remove {
+    background: transparent;
+    border: none;
+    color: #d9534f;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/* ==========================================================================
+   Super Commenter Custom Select Avatar Button
+   ========================================================================== */
+
+#sunnycom-sc-select-avatar-btn,
+.sunnycom-btn-select {
+    background-color: #ffcc05;
+    color: #ffffff;
+    border: none;
+    border-radius: 1px;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#sunnycom-sc-select-avatar-btn:hover,
+.sunnycom-btn-select:hover {
+    background-color: #0B3C5D;
+    color: #ffffff;
+}
